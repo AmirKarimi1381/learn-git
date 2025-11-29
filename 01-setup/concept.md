@@ -1,60 +1,86 @@
-# Lab 01 - Global Git Configuration & Line Endings
+````md
+# Lab 01 — Global Git Configuration & Line Endings
 
-### Why Git needs your identity
-Every single commit in Git is permanently signed with a name + email.  
-This is how `git blame`, GitHub contributions, and legal authorship work.  
-Set once globally -> applies to every repository forever.
+---
 
-### The infamous line ending war: CRLF vs LF
-|--------------|-------------|--------------------|-------------------------------------------------------------|
-| System       | Line ending | Bytes              | Historical reason                                           |
-|--------------|-------------|--------------------|-------------------------------------------------------------|
-| UnixBaseOS   | LF          | `\n` (0x0A)        | Original UNIX standard from 1970s                           |
-| Windows      | CRLF        | `\r\n` (0x0D 0x0A) | Inherited from old typewriter "Carriage Return + Line Feed" |
-|--------------|-------------|----------------------------------------------------------------------------------|
+## 🆔 Why Git Needs Your Identity
 
-**Open-source world standard = LF only**  
-99.9 % of GitHub/GitLab repositories store text files with pure LF.  
-This is enforced by most linters, CI systems, and editors in 2025.
+Every commit in Git is permanently linked to a **name** and **email**.  
+This powers critical features like:
 
-### What happens if you ignore this?
-- Git sees every line as changed -> fake 100 % diffs
-- Scripts break on Linux (`\r` interpreted as part of filename/command)
-- `git blame` becomes useless noise
-- CI/CD pipelines fail on macOS/Linux containers
-- Teammates hate you forever
+- `git blame`
+- GitHub contribution graphs
+- Legal authorship tracking
 
-### The perfect solution (2025 best practice)
-Meaning:
-On commit   -> automatically convert CRLF -> LF (keeps repository clean)
-On checkout -> leave files untouched (stay as LF, perfect for Unix)
+You set it **once globally**, and it applies to **every repository forever**.
+
+---
+
+## ⚔️ The Line Ending War: CRLF vs LF
+
+| System       | Line Ending | Bytes         | Historical Reason                                               |
+|--------------|-------------|---------------|------------------------------------------------------------------|
+| Unix / Linux | LF          | `\n` (0x0A)    | Original UNIX standard from the 1970s                          |
+| Windows      | CRLF        | `\r\n` (0x0D 0x0A) | From old typewriters: *Carriage Return + Line Feed*     |
+
+> **Open-source world standard = LF only**  
+> 99.9% of GitHub/GitLab repositories store text files using **pure LF**.  
+> Enforced by modern editors, CI pipelines, and Docker containers (2025).
+
+---
+
+## ❗ What Happens If You Ignore This?
+
+- Git shows **fake 100% diffs** (every line looks changed)
+- Shell scripts break on Linux/macOS (`\r` gets treated as part of command)
+- `git blame` becomes noisy and useless
+- CI/CD pipelines fail in containers
+- Your teammates silently hate you
+
+---
+
+## 🛠️ 2025 Best Practice: The Perfect Fix
+
+💡 Goal:  
+- On **commit** → Convert `CRLF → LF` (keep repository clean)  
+- On **checkout** → Leave files untouched (stay LF — safe for Unix)
 
 ```bash
 git config --global core.safecrlf true
-```
+````
 
-Extra safety -> Git will warn or reject if someone tries to commit inconsistent line endings.
+> Enables warnings or rejection when inconsistent line endings are detected.
 
-**Golden rule for real-world teams**
-Always add a ```.gitattributes``` file at repository root:
+---
+
+## 🌍 Golden Rule for Real Teams — Always Use `.gitattributes`
+
+Create this file **at the repository root**:
+
 ```gitattributes
 # Normalize all text files to LF in the repository
 * text=auto eol=lf
 ```
-This file is committed once and forces correct behavior for everyone --- even if they have wrong global config.
 
-***Summary table***
-|--------------------|-------------|--------------------|-------------------------------------------------------------|
-|Setting             | UnixBaseOS  | Windows            | Repository stays clean?       | Recommended?                |
-|--------------------|-------------|--------------------|-------------------------------------------------------------|
-|core.autocrlf false | NO          | NO                 | Only if everyone is perfect   | Never                       |
-|--------------------|-------------|--------------------|-------------------------------------------------------------|
-|core.autocrlf input | YES         | NO                 | YES                           | YES (Unix)                  |
-|--------------------|-------------|--------------------|-------------------------------------------------------------|
-|core.autocrlf true  | NO          | YES                | YES                           | YES (Windows)               |
-|--------------------|-------------|--------------------|-------------------------------------------------------------|
-|.gitattributes      | YES         | YES                | YES Forever                   | Golden Standard             |
-|--------------------|-------------|--------------------|-------------------------------------------------------------|
-+ .gitattributes * text=auto eol=lf
+📌 This enforces correct behavior **for everyone** —
+even if their local Git config is wrong.
 
-Now your Git is ready for serious DevOps work.
+---
+
+## 📋 Summary Table
+
+| Setting               | Unix/Linux | Windows | Repository Clean?    | Recommended?      |
+| --------------------- | ---------- | ------- | -------------------- | ----------------- |
+| `core.autocrlf false` | ❌          | ❌       | Only if perfect team | 🚫 Never          |
+| `core.autocrlf input` | ✔️         | ❌       | ✔️                   | 👍 Yes (Unix)     |
+| `core.autocrlf true`  | ❌          | ✔️      | ✔️                   | 👍 Yes (Windows)  |
+| `.gitattributes`      | ✔️         | ✔️      | ✔️✔️✔️ Forever       | ⭐ Golden Standard |
+
+> Final setup:
+> `+ .gitattributes — * text=auto eol=lf`
+
+---
+
+🚀 **Your Git is now ready for real DevOps, CI/CD, Docker, and cross-platform collaboration.**
+
+```
