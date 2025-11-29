@@ -81,6 +81,6 @@ even if their local Git config is wrong.
 
 ---
 
-🚀 **Your Git is now ready for real DevOps, CI/CD, Docker, and cross-platform collaboration.**
+🚀 **Your Git is now ready.**
 
-```
+````
