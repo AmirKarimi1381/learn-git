@@ -1,19 +1,45 @@
-# Learn Git - Deep, Conceptual, Step-by-Step
+# Learn Git — Deep, Conceptual, Step-by-Step
 
-A public learning journey to master Git from the ground up - with crystal-clear concepts, real commands, and zero fluff.
+A public learning journey to **truly master Git** — with crystal-clear concepts, real commands, and zero fluff.
 
-This repository follows:
-Inspired by the amazing Git Immersion labs --- the most conceptual Git tutorial ever created.
-- Git Immersion (concept-heavy labs)
-- Pro Git book (official & free)
-- Real-world DevOps practices
+---
 
-Every lab is split into two files:
-- `concepts.md` -> Why things work (the magic under the hood)
-- `commands.md` -> What to type and what it actually does
+## 🚀 Why this repo?
 
-Goal: Become the person in every team who truly understands Git internals, branching models, rebasing, and fixes any mess in seconds.
+Most tutorials show **what** to type.  
+This one explains **why things work.**
 
-Contributions, corrections, and stars are very welcome!
+Inspired by:
+- 🔍 Git Immersion (concept-heavy labs)
+- 📘 Pro Git (official & free)
+- ⚙️ Real-world DevOps practices
 
-Made with love by @AmirKarimi1381 2025-2026
+---
+
+## 📂 Structure
+
+Every topic is split into two files:
+
+| File | Purpose |
+|------|---------|
+| `concepts.md` | Understanding the internals (the real magic) |
+| `commands.md` | What to type and what it actually does |
+
+---
+
+## 🎯 Goal
+
+Become the person on any team who:
+✔ Truly understands Git internals  
+✔ Knows branching models and rebasing deeply  
+✔ Can fix any Git mess — in seconds  
+
+---
+
+## 🤝 Contributions
+
+Corrections, improvements, and ⭐ stars are very welcome!
+
+---
+
+Made with ❤️ by [@AmirKarimi1381](https://github.com/AmirKarimi1381) — 2025–2026
