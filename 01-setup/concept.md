@@ -47,7 +47,7 @@ You set it **once globally**, and it applies to **every repository forever**.
 
 ```bash
 git config --global core.safecrlf true
-````
+```
 
 > Enables warnings or rejection when inconsistent line endings are detected.
 
