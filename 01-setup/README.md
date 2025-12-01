@@ -1,4 +1,3 @@
-````markdown
 # Git Line Endings Explained Forever (LF vs CRLF)
 
 Come sit next to me — I'm going to explain the whole CRLF/LF mess in the simplest way possible so you’ll never have to think about it again.
@@ -77,5 +76,3 @@ git config --global core.safecrlf true
 Done. Line-ending problems are now officially solved for the rest of your career.
 
 be Happy! 🚀
-
-````
