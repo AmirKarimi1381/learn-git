@@ -33,7 +33,7 @@ Learn Git completely using only free resources – easy, clear, and in the right
 
 | Lab | Title                     | Link                                              | Done? | My Note                |
 |-----|---------------------------|---------------------------------------------------|-------|------------------------|
-| 0   | Setup & Intro             | [Lab 0](https://gitimmersion.com/lab_00.html)     | ✅    | Very easy start        |
+| 1   | Setup & Intro             | [Lab 1](https://github.com/AmirKarimi1381/learn-git/tree/main/01-setup)     | ✅    | different LF and CRLF        |
 | 1   | What is Git?              | [Lab 1](https://gitimmersion.com/lab_01.html)     | ✅    |                        |
 | 2   | Create Repository         | [Lab 2](https://gitimmersion.com/lab_02.html)     | ⏳    | In progress            |
 | ... | ...                       | ...                                               |       |                        |
