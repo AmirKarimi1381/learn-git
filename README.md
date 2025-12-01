@@ -6,7 +6,11 @@
 
 **A simple step-by-step path to really understand Git – no complicated words, no cost!**
 
-[![GitHub stars](https://img.shields.io/github/stars/AmirKarimi1381/git-learning-path?style=social)](https://github.com/AmirKarimi1381/git)
+[![GitHub stars](https://img.shields.io/github/stars/AmirKarimi1381/learn-git
+
+-learning-path?style=social)](https://github.com/AmirKarimi1381/learn-git
+
+)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 </div>
@@ -25,7 +29,11 @@ Learn Git completely using only free resources – easy, clear, and in the right
 | 1 | Interactive   | Git Immersion (Best place to start) | [gitimmersion.com](https://gitimmersion.com)                                          | 
 | 2 | YouTube Video         | Learn Git – Full Course for Beginners        | [YouTube](https://youtu.be/zTjRZNkhiEU)                              | freeCodeCamp.org |
 | 3 | YouTube Video  | Git & GitHub Tutorial         | [YouTube](https://www.youtube.com/watch?v=S7XpTAnSDL4)                               | JavaScript Mastery |
-| 4 | Free Book     | Pro Git Book (PDF + EPUB)          | [PDF](.com/AmirKarimi1381/git/blob/main/progit.pdf)  <br> [EPUB](https://github.com/AmirKarimi1381/git/blob/main/01-progit.epub) | Git Main Wesite |
+| 4 | Free Book     | Pro Git Book (PDF + EPUB)          | [PDF](.com/AmirKarimi1381/learn-git
+
+/blob/main/progit.pdf)  <br> [EPUB](https://github.com/AmirKarimi1381/learn-git
+
+/blob/main/01-progit.epub) | Git Main Wesite |
 
 ---
 
@@ -66,8 +74,12 @@ Everything else (VS Code, Oh My Zsh + git aliases, etc.) is optional.
 
 It makes me happy and helps others find it too 😄
 
-<a href="https://github.com/AmirKarimi1381/git/">
-  <img src="https://img.shields.io/github/stars/AmirKarimi1381/git/?style=for-the-badge&logo=github&color=yellow" />
+<a href="https://github.com/AmirKarimi1381/learn-git
+
+/">
+  <img src="https://img.shields.io/github/stars/AmirKarimi1381/learn-git
+
+/?style=for-the-badge&logo=github&color=yellow" />
 </a>
 
 Pull Requests are always welcome! 🚀
