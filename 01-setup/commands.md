@@ -1,90 +1,40 @@
-````md
-# Lab 01 — Commands
+````markdown
+# Commands – Git Setup & Line Endings
 
----
-
-## 🆔 Configure Your Git Identity
-
+### Run once (Linux/macOS – recommended 2025)
 ```bash
-git config --global user.name "AmirKarimi1381"
-git config --global user.email "email@gmail.com"
-```
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
 
-> Used by GitHub contributions, `git blame`, and legal authorship tracking.
-> 🔗 [https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
-
----
-
-## ⚙️ Set Line Ending Behavior (LF vs CRLF)
-
-### 🐧 Recommended for Linux/macOS (DevOps, Docker, GitHub)
-
-```bash
 git config --global core.autocrlf input
 git config --global core.safecrlf true
+
+git config --global init.defaultBranch main
 ```
 
-> Keeps repository clean using LF
-> Warns if mixed line endings appear
-
----
-
-### 🪟 Alternative for Windows (only if needed)
-
+### Windows users
 ```bash
 git config --global core.autocrlf true
 ```
 
-> Converts LF ↔ CRLF (can pollute repo if misused)
-> 🔗 [https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings)
-
----
-
-## 🔍 Verify Settings
-
+### Verify
 ```bash
-git config --global --list | grep -E 'user|core'
+git config --global --list
 ```
 
----
+### Must add to every repository (root)
+`.gitattributes`
+```
+* text=auto eol=lf
+```
 
-## 📂 Where Git Stores These Settings
-
-| Location         | Purpose                         |
-| ---------------- | ------------------------------- |
-| `~/.gitconfig`   | User-level config (what we set) |
-| `.git/config`    | Repo-specific overrides         |
-| `/etc/gitconfig` | System-wide default             |
-
----
-
-## 💡 Optional: Save as a reusable setup script
-
-📄 `setup_git.sh` (optional starter script)
-
+### Quick setup script (optional)
 ```bash
-#!/bin/bash
-git config --global user.name "AmirKarimi1381"
-git config --global user.email "email@gmail.com"
-git config --global core.autocrlf input
-git config --global core.safecrlf true
-git config --global init.defaultBranch main
-echo "Git is configured successfully! 🚀"
+curl -sL https://raw.githubusercontent.com/amir-sinic/git-learning/main/01-Setup/setup.sh | bash
 ```
 
----
-
-## 🧠 Final Checklist
-
-| Configuration          | Status     |
-| ---------------------- | ---------- |
-| Name & Email           | ✔️         |
-| Safe LF behavior       | ✔️         |
-| Verified with `--list` | ✔️         |
-| `.gitattributes` added | ⏳ Next Lab |
-
----
-
-🚀 Your Git is now clean, traceable, and DevOps-ready.
-
-```
+**Checklist**
+- [ ] Identity configured
+- [ ] Line endings set to `input` (or `true` on Windows)
+- [ ] `.gitattributes` added to new projects
+````
