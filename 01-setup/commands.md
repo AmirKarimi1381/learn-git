@@ -1,4 +1,3 @@
-````markdown
 # Commands – Git Setup & Line Endings
 
 ### Run once (Linux/macOS – recommended 2025)
@@ -37,4 +36,3 @@ curl -sL https://raw.githubusercontent.com/amir-sinic/git-learning/main/01-Setup
 - [ ] Identity configured
 - [ ] Line endings set to `input` (or `true` on Windows)
 - [ ] `.gitattributes` added to new projects
-````
